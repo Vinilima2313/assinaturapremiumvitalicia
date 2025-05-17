@@ -71,4 +71,42 @@
     <!-- Banner Replit -->
     <script type="text/javascript" src="https://replit.com/public/js/replit-dev-banner.js"></script>
   </body>
+  <script>
+  window.addEventListener("DOMContentLoaded", function () {
+    const botoes = document.querySelectorAll("a, button");
+
+    botoes.forEach((btn) => {
+      const texto = btn.textContent.trim().toLowerCase();
+
+      if (texto.includes("pagar agora por r$29,90")) {
+        // Oculta o botão antigo
+        btn.style.display = "none";
+
+        // Cria botão novo idêntico
+        const novoBotao = document.createElement("a");
+        novoBotao.href = "https://infotech35.pay.yampi.com.br/r/K4MRU3P7NV";
+        novoBotao.target = "_blank";
+        novoBotao.onclick = function () {
+          fbq('track', 'InitiateCheckout');
+        };
+        novoBotao.innerHTML = '💳 PAGAR AGORA POR R$29,90';
+        novoBotao.style.cssText = `
+          display: inline-block;
+          padding: 15px 30px;
+          background-color: #00AEEF;
+          color: white;
+          text-decoration: none;
+          border-radius: 30px;
+          font-size: 20px;
+          font-weight: 700;
+          font-family: 'Montserrat', sans-serif;
+          box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        `;
+
+        // Insere o novo botão depois do antigo
+        btn.parentNode.insertBefore(novoBotao, btn.nextSibling);
+      }
+    });
+  });
+</script>
 </html>
