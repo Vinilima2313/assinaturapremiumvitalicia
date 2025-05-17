@@ -73,5 +73,23 @@
 
     <!-- Banner Replit (se estiver em ambiente de desenvolvimento) -->
     <script type="text/javascript" src="https://replit.com/public/js/replit-dev-banner.js"></script>
+    <script>
+  window.addEventListener("DOMContentLoaded", function () {
+    const botoes = document.querySelectorAll("a, button");
+
+    botoes.forEach((btn) => {
+      const texto = btn.textContent.trim().toLowerCase();
+      if (texto.includes("pagar agora")) {
+        // troca o link
+        btn.setAttribute("href", "https://infotech35.pay.yampi.com.br/r/K4MRU3P7NV");
+        btn.setAttribute("target", "_blank");
+        btn.onclick = function () {
+          fbq('track', 'InitiateCheckout');
+        };
+      }
+    });
+  });
+</script>
+
   </body>
 </html>
