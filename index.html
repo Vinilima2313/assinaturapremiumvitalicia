@@ -24,7 +24,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
     <title>Spotify & YouTube Music Premium - Acesso Vitalício por R$29,90!</title>
     <meta name="description" content="Obtenha acesso vitalício ao Spotify e YouTube Music Premium por apenas R$29,90. Economize mais de 90% no primeiro ano com nossa oferta exclusiva!" />
-    
+
     <!-- Open Graph Tags -->
     <meta property="og:title" content="Spotify & YouTube Music Premium - Acesso Vitalício" />
     <meta property="og:description" content="Obtenha acesso vitalício ao Spotify e YouTube Music Premium por apenas R$29,90. Economize mais de 90% no primeiro ano!" />
@@ -36,60 +36,39 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <script type="module" crossorigin src="/assets/index-y_rzYZqG.js"></script>
     <link rel="stylesheet" crossorigin href="/assets/index-NoK2LAgY.css">
+
+    <style>
+      .botao-principal {
+        background-color: #0058F0;
+        color: white;
+        padding: 18px 30px;
+        border: none;
+        border-radius: 40px;
+        font-size: 18px;
+        font-weight: bold;
+        font-family: 'Montserrat', sans-serif;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        text-decoration: none;
+        display: inline-block;
+        margin-top: 40px;
+      }
+    </style>
   </head>
 
   <body>
     <div id="root"></div>
 
-    <!-- Botões de compra com link da Yampi -->
-    <div style="text-align: center; margin-top: 40px;">
+    <!-- Botão principal novo com link da Yampi -->
+    <div style="text-align: center;">
       <a href="https://infotech35.pay.yampi.com.br/r/K4MRU3P7NV" 
          onclick="fbq('track', 'InitiateCheckout');" 
          target="_blank" 
-         style="padding: 15px 30px; background-color: #1DB954; color: white; text-decoration: none; border-radius: 8px; font-size: 18px; font-weight: bold;">
-         Ativar agora por R$29,90
+         class="botao-principal">
+         PAGAR AGORA POR R$29,90
       </a>
     </div>
 
-    <div style="text-align: center; margin-top: 40px;">
-      <a href="https://infotech35.pay.yampi.com.br/r/K4MRU3P7NV" 
-         onclick="fbq('track', 'InitiateCheckout');" 
-         target="_blank" 
-         style="padding: 15px 30px; background-color: #1DB954; color: white; text-decoration: none; border-radius: 8px; font-size: 18px; font-weight: bold;">
-         Ativar agora por R$29,90
-      </a>
-    </div>
-
-    <div style="text-align: center; margin-top: 40px;">
-      <a href="https://infotech35.pay.yampi.com.br/r/K4MRU3P7NV" 
-         onclick="fbq('track', 'InitiateCheckout');" 
-         target="_blank" 
-         style="padding: 15px 30px; background-color: #1DB954; color: white; text-decoration: none; border-radius: 8px; font-size: 18px; font-weight: bold;">
-         Ativar agora por R$29,90
-      </a>
-    </div>
-
-    <!-- Se quiser duplicar mais, copie o bloco acima -->
-
-    <!-- Banner Replit (se estiver em ambiente de desenvolvimento) -->
+    <!-- Banner Replit -->
     <script type="text/javascript" src="https://replit.com/public/js/replit-dev-banner.js"></script>
-    <script>
-  window.addEventListener("DOMContentLoaded", function () {
-    const botoes = document.querySelectorAll("a, button");
-
-    botoes.forEach((btn) => {
-      const texto = btn.textContent.trim().toLowerCase();
-      if (texto.includes("pagar agora")) {
-        // troca o link
-        btn.setAttribute("href", "https://infotech35.pay.yampi.com.br/r/K4MRU3P7NV");
-        btn.setAttribute("target", "_blank");
-        btn.onclick = function () {
-          fbq('track', 'InitiateCheckout');
-        };
-      }
-    });
-  });
-</script>
-
   </body>
 </html>
