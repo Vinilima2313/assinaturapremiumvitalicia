@@ -1,25 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
   <head>
-    <!-- Meta Pixel Code -->
-    <script>
-      !function(f,b,e,v,n,t,s)
-      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-      n.queue=[];t=b.createElement(e);t.async=!0;
-      t.src=v;s=b.getElementsByTagName(e)[0];
-      s.parentNode.insertBefore(t,s)}(window, document,'script',
-      'https://connect.facebook.net/en_US/fbevents.js');
-      fbq('init', '1193492242068704'); 
-      fbq('track', 'PageView');
-    </script>
-    <noscript>
-      <img height="1" width="1" style="display:none"
-      src="https://www.facebook.com/tr?id=1193492242068704&ev=PageView&noscript=1"/>
-    </noscript>
-    <!-- End Meta Pixel Code -->
-
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
     <title>Spotify & YouTube Music Premium - Acesso Vitalício por R$29,90!</title>
@@ -58,10 +39,9 @@
   <body>
     <div id="root"></div>
 
-    <!-- Botão principal novo com link da Yampi -->
+    <!-- Botão principal SEM o pixel -->
     <div style="text-align: center;">
       <a href="https://infotech35.pay.yampi.com.br/r/K4MRU3P7NV" 
-         onclick="fbq('track', 'InitiateCheckout');" 
          target="_blank" 
          class="botao-principal">
          PAGAR AGORA POR R$29,90
@@ -71,42 +51,40 @@
     <!-- Banner Replit -->
     <script type="text/javascript" src="https://replit.com/public/js/replit-dev-banner.js"></script>
   </body>
+
   <script>
-  window.addEventListener("DOMContentLoaded", function () {
-    const botoes = document.querySelectorAll("a, button");
+    window.addEventListener("DOMContentLoaded", function () {
+      const botoes = document.querySelectorAll("a, button");
 
-    botoes.forEach((btn) => {
-      const texto = btn.textContent.trim().toLowerCase();
+      botoes.forEach((btn) => {
+        const texto = btn.textContent.trim().toLowerCase();
 
-      if (texto.includes("pagar agora por r$29,90")) {
-        // Oculta o botão antigo
-        btn.style.display = "none";
+        if (texto.includes("pagar agora por r$29,90")) {
+          // Oculta o botão antigo
+          btn.style.display = "none";
 
-        // Cria botão novo idêntico
-        const novoBotao = document.createElement("a");
-        novoBotao.href = "https://infotech35.pay.yampi.com.br/r/K4MRU3P7NV";
-        novoBotao.target = "_blank";
-        novoBotao.onclick = function () {
-          fbq('track', 'InitiateCheckout');
-        };
-        novoBotao.innerHTML = '💳 PAGAR AGORA POR R$29,90';
-        novoBotao.style.cssText = `
-          display: inline-block;
-          padding: 15px 30px;
-          background-color: #00AEEF;
-          color: white;
-          text-decoration: none;
-          border-radius: 30px;
-          font-size: 20px;
-          font-weight: 700;
-          font-family: 'Montserrat', sans-serif;
-          box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-        `;
+          // Cria botão novo idêntico (SEM Pixel)
+          const novoBotao = document.createElement("a");
+          novoBotao.href = "https://infotech35.pay.yampi.com.br/r/K4MRU3P7NV";
+          novoBotao.target = "_blank";
+          novoBotao.innerHTML = '💳 PAGAR AGORA POR R$29,90';
+          novoBotao.style.cssText = `
+            display: inline-block;
+            padding: 15px 30px;
+            background-color: #00AEEF;
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            font-size: 20px;
+            font-weight: 700;
+            font-family: 'Montserrat', sans-serif;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+          `;
 
-        // Insere o novo botão depois do antigo
-        btn.parentNode.insertBefore(novoBotao, btn.nextSibling);
-      }
+          // Insere o novo botão depois do antigo
+          btn.parentNode.insertBefore(novoBotao, btn.nextSibling);
+        }
+      });
     });
-  });
-</script>
+  </script>
 </html>
