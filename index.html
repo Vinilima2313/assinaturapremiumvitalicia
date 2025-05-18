@@ -11,6 +11,26 @@
     <meta property="og:description" content="Obtenha acesso vitalício ao Spotify e YouTube Music Premium por apenas R$29,90. Economize mais de 90% no primeiro ano!" />
     <meta property="og:type" content="website" />
 
+    <!-- Meta Pixel Code -->
+    <script>
+      !function(f,b,e,v,n,t,s)
+      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+      n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)}(window, document,'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', '1193492242068704');
+      fbq('track', 'PageView');
+      fbq('track', 'ViewContent');
+    </script>
+    <noscript>
+      <img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=1193492242068704&ev=PageView&noscript=1"/>
+    </noscript>
+    <!-- End Meta Pixel Code -->
+
     <!-- Fonts & Assets -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -50,41 +70,42 @@
 
     <!-- Banner Replit -->
     <script type="text/javascript" src="https://replit.com/public/js/replit-dev-banner.js"></script>
-  </body>
 
-  <script>
-    window.addEventListener("DOMContentLoaded", function () {
-      const botoes = document.querySelectorAll("a, button");
+    <!-- Substituição dinâmica do botão -->
+    <script>
+      window.addEventListener("DOMContentLoaded", function () {
+        const botoes = document.querySelectorAll("a, button");
 
-      botoes.forEach((btn) => {
-        const texto = btn.textContent.trim().toLowerCase();
+        botoes.forEach((btn) => {
+          const texto = btn.textContent.trim().toLowerCase();
 
-        if (texto.includes("pagar agora por r$29,90")) {
-          // Oculta o botão antigo
-          btn.style.display = "none";
+          if (texto.includes("pagar agora por r$29,90")) {
+            // Oculta o botão antigo
+            btn.style.display = "none";
 
-          // Cria botão novo idêntico (SEM Pixel)
-          const novoBotao = document.createElement("a");
-          novoBotao.href = "https://infotech35.pay.yampi.com.br/r/K4MRU3P7NV";
-          novoBotao.target = "_blank";
-          novoBotao.innerHTML = '💳 PAGAR AGORA POR R$29,90';
-          novoBotao.style.cssText = `
-            display: inline-block;
-            padding: 15px 30px;
-            background-color: #00AEEF;
-            color: white;
-            text-decoration: none;
-            border-radius: 30px;
-            font-size: 20px;
-            font-weight: 700;
-            font-family: 'Montserrat', sans-serif;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-          `;
+            // Cria botão novo idêntico (SEM Pixel)
+            const novoBotao = document.createElement("a");
+            novoBotao.href = "https://infotech35.pay.yampi.com.br/r/K4MRU3P7NV";
+            novoBotao.target = "_blank";
+            novoBotao.innerHTML = '💳 PAGAR AGORA POR R$29,90';
+            novoBotao.style.cssText = `
+              display: inline-block;
+              padding: 15px 30px;
+              background-color: #00AEEF;
+              color: white;
+              text-decoration: none;
+              border-radius: 30px;
+              font-size: 20px;
+              font-weight: 700;
+              font-family: 'Montserrat', sans-serif;
+              box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            `;
 
-          // Insere o novo botão depois do antigo
-          btn.parentNode.insertBefore(novoBotao, btn.nextSibling);
-        }
+            // Insere o novo botão depois do antigo
+            btn.parentNode.insertBefore(novoBotao, btn.nextSibling);
+          }
+        });
       });
-    });
-  </script>
+    </script>
+  </body>
 </html>
